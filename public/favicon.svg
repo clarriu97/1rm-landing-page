@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none">
+  <rect width="60" height="60" rx="12" fill="#093C5D"/>
+  
+  <!-- Bar -->
+  <rect x="5" y="26" width="50" height="8" rx="4" fill="#5DF8D8"/>
+  
+  <!-- Left stopper -->
+  <rect x="12" y="22" width="6" height="16" rx="2" fill="#5DF8D8"/>
+  
+  <!-- Red plate -->
+  <rect x="20" y="14" width="8" height="32" rx="2" fill="#DC2626"/>
+  
+  <!-- Blue plate -->
+  <rect x="30" y="14" width="8" height="32" rx="2" fill="#3B82F6"/>
+  
+  <!-- Green plate -->
+  <rect x="40" y="14" width="8" height="32" rx="2" fill="#16A34A"/>
+  
+  <!-- Right collar -->
+  <rect x="48" y="21" width="8" height="18" rx="2" fill="#5DF8D8"/>
+  <circle cx="52" cy="30" r="2" fill="#093C5D"/>
+</svg>
