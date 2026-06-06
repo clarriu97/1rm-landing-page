@@ -237,11 +237,11 @@
                   required
                   aria-required="true"
                   aria-label="Email address"
-                  class="flex-1 h-14 px-5 rounded-xl bg-white/5 border border-ocean/50 text-white placeholder-cyan/40 text-base focus:outline-none focus:border-neon focus:ring-2 focus:ring-neon/20 transition-all"
+                  class="w-full sm:flex-1 h-14 px-5 rounded-xl bg-white/5 border border-ocean/50 text-white placeholder-cyan/40 text-base focus:outline-none focus:border-neon focus:ring-2 focus:ring-neon/20 transition-all"
                 />
                 <button
                   type="submit"
-                  class="h-14 px-8 rounded-xl bg-neon text-deep font-bold text-base tracking-wide whitespace-nowrap hover:shadow-[0_0_30px_rgba(93,248,216,0.4)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+                  class="w-full sm:w-auto h-14 px-8 rounded-xl bg-neon text-deep font-bold text-base tracking-wide whitespace-nowrap hover:shadow-[0_0_30px_rgba(93,248,216,0.4)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
                 >
                   Join Waitlist
                 </button>
@@ -381,6 +381,9 @@
             <details class="group rounded-2xl bg-ocean/10 border border-ocean/20 open:border-neon/40 transition-all duration-300">
               <summary class="flex items-center justify-between p-6 cursor-pointer text-white font-semibold text-lg">
                 How do you calculate 1RM without maxing out?
+                <svg class="w-5 h-5 text-cyan/60 group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
               </summary>
               <div class="px-6 pb-6 text-cyan/70 leading-relaxed">
                 Submaximal 1RM estimation formulas predict your one rep max based on the weight you lifted and the number of reps performed. You do not need to attempt a dangerous maximal lift. The Epley formula (1RM = W &times; (1 + R / 30)) and Brzycki formula (1RM = W &times; 36 / (37 &minus; R)) are research-validated methods that work perfectly for rep ranges up to 10-15.
