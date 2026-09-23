@@ -10,22 +10,26 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font-family: 'Inter', system-ui, sans-serif; background: #093C5D; color: #e2e8f0; line-height: 1.7; padding: 2rem 1.5rem; }
+      body { font-family: 'Barlow', system-ui, sans-serif; background: #0E0F11; color: #F2EFE8; line-height: 1.7; padding: 0 1.5rem 3rem; font-variant-numeric: tabular-nums; }
+      body::before { content: ""; display: block; height: 6px; margin: 0 -1.5rem 2rem; background: repeating-linear-gradient(-45deg, #FFC21A 0 6px, #0E0F11 6px 12px); }
+      ::selection { background: #FFC21A; color: #0E0F11; }
       .container { max-width: 720px; margin: 0 auto; }
-      h1 { font-size: 2rem; font-weight: 800; color: #5DF8D8; margin-bottom: 0.5rem; }
-      h2 { font-size: 1.25rem; font-weight: 700; color: #fff; margin-top: 2rem; margin-bottom: 0.75rem; }
-      p { margin-bottom: 1rem; color: #94a3b8; }
-      a { color: #5DF8D8; }
-      .back { display: inline-block; margin-bottom: 2rem; color: #6FD1D7; text-decoration: none; font-size: 0.875rem; }
-      .back:hover { color: #5DF8D8; }
-      hr { border: none; border-top: 1px solid rgba(59, 117, 151, 0.3); margin: 2rem 0; }
-      time { color: #6FD1D7; font-size: 0.875rem; }
-      ul { margin-bottom: 1rem; padding-left: 1.5rem; color: #94a3b8; }
+      h1 { font-family: 'Big Shoulders Display', 'Barlow Condensed', Impact, sans-serif; font-size: 3.5rem; font-weight: 800; line-height: 0.95; color: #F2EFE8; margin-bottom: 0.75rem; }
+      h2 { font-family: 'Big Shoulders Display', 'Barlow Condensed', Impact, sans-serif; font-size: 1.75rem; font-weight: 800; line-height: 1.1; color: #F2EFE8; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+      p { margin-bottom: 1rem; color: #B8B3A9; }
+      strong { color: #F2EFE8; font-weight: 600; }
+      a { color: #FFC21A; }
+      .back { display: inline-block; margin-bottom: 2rem; color: #B8B3A9; text-decoration: none; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+      .back:hover { color: #FFC21A; }
+      hr { border: none; border-top: 1px solid #33373D; margin: 2rem 0; }
+      time { display: block; margin-bottom: 1.5rem; color: #96918A; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; }
+      ul { margin-bottom: 1rem; padding-left: 1.5rem; color: #B8B3A9; }
       li { margin-bottom: 0.5rem; }
+      li::marker { color: #FFC21A; }
     </style>
   </head>
   <body>

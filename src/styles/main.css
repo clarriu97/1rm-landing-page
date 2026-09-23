@@ -1,49 +1,81 @@
 @import "tailwindcss";
 
+/* Iron & chalk: same tokens as the app (lib/ui/theme/app_colors.dart). */
 @theme {
-  --color-deep: #093C5D;
-  --color-ocean: #3B7597;
-  --color-cyan: #6FD1D7;
-  --color-neon: #5DF8D8;
+  --color-iron: #0E0F11;
+  --color-surface: #17191C;
+  --color-surface-raised: #22252A;
+  --color-outline: #33373D;
 
-  --font-sans: "Inter", system-ui, sans-serif;
+  --color-accent: #FFC21A;
+  --color-on-accent: #0E0F11;
+
+  --color-chalk: #F2EFE8;
+  --color-chalk-dim: #B8B3A9;
+  --color-muted: #96918A;
+
+  --color-error: #FF5B4F;
+
+  --font-display: "Big Shoulders Display", "Barlow Condensed", Impact, sans-serif;
+  --font-sans: "Barlow", system-ui, sans-serif;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Selection color */
-::selection {
-  background-color: var(--color-neon);
-  color: var(--color-deep);
+/* Tabular figures so numbers line up, as in the app. */
+body {
+  font-variant-numeric: tabular-nums;
 }
 
-/* Focus styles */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
 input:focus {
   outline: none;
 }
 
-/* Custom scrollbar */
+/* Faint diamond crosshatch, like the knurling on a barbell. */
+.knurl {
+  background-image:
+    repeating-linear-gradient(45deg, rgb(242 239 232 / 0.05) 0 1px, transparent 1px 7px),
+    repeating-linear-gradient(-45deg, rgb(242 239 232 / 0.05) 0 1px, transparent 1px 7px);
+}
+
+/* Diagonal safety-yellow/black band, as on gym floor markings. */
+.hazard {
+  height: 6px;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-accent) 0 6px,
+    var(--color-on-accent) 6px 12px
+  );
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-deep);
+  background: var(--color-iron);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-ocean);
+  background: var(--color-outline);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-cyan);
+  background: var(--color-muted);
 }
 
-/* Animation utilities */
 @keyframes bounce {
   0%, 100% {
     transform: translateX(-50%) translateY(0);
@@ -68,4 +100,14 @@ input:focus {
 
 .animate-pulse {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-bounce {
+    animation: none;
+  }
 }
