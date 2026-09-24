@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://1rm.app/sitemap.xml
+Sitemap: https://1rm.larri.dev/sitemap.xml
