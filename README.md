@@ -20,12 +20,30 @@ pnpm preview  # preview production build
 
 ## Color palette
 
+Iron & chalk, the same tokens as the app (`lib/ui/theme/app_colors.dart`), defined in `src/styles/main.css`.
+
 | Color | Hex | Usage |
 |-------|-----|-------|
-| Deep | `#093C5D` | Main background |
-| Ocean | `#3B7597` | Cards, borders, secondary backgrounds |
-| Cyan | `#6FD1D7` | Secondary text, icons |
-| Neon | `#5DF8D8` | CTA, buttons, highlights |
+| Iron | `#0E0F11` | Background |
+| Surface | `#17191C` | Cards, panels |
+| Outline | `#33373D` | Borders, dividers |
+| Chalk | `#F2EFE8` | Text |
+| Accent | `#FFC21A` | Safety yellow: numbers, CTA, hazard stripes |
+
+## App screens
+
+`public/screens/` holds the app's real screens as WebP (480 and 720 px wide), made from the goldens of `1rm-mobile-app`:
+
+```bash
+G=../1rm-mobile-app/test/goldens/goldens; S=$G/store/app_store/en-US
+for w in 480 720; do
+  for n in home add_entry detail history; do cwebp -q 80 -resize $w 0 $G/$n.iphone_pro.png -o public/screens/$n-$w.webp; done
+  cwebp -q 80 -crop 106 492 1108 2376 -resize $w 0 $S/02_working_weights.png -o public/screens/working_weights-$w.webp
+  cwebp -q 80 -crop 106 492 1108 2376 -resize $w 0 $S/04_new_pr.png -o public/screens/new_pr-$w.webp
+done
+```
+
+The working weights and new PR screens are cropped from the store screenshots, since no plain golden shows them.
 
 ## Forms
 
@@ -47,10 +65,11 @@ Both forms (Hero and Waitlist section) submit to **Formspree** at `https://forms
 ├── postcss.config.js
 ├── vite.config.js
 ├── public/
+│   ├── screens/          # App screens (WebP)
 │   ├── favicon.svg       # App icon
 │   └── logo.svg          # Logo for header
 ├── src/
-│   ├── main.js           # Entry point (imports CSS)
+│   ├── main.js           # Entry point: CSS, header, count-up, scroll story
 │   └── styles/
 │       └── main.css      # Tailwind + custom styles
 ```
